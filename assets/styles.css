@@ -2,10 +2,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Myfont';
+    src: url(fonts/outfit/Outfit-VariableFont_wght.ttf) format('trueType');
+}
+
+@font-face {
+    font-family: 'Myfont2';
+    src: url(fonts/young-serif/YoungSerif-Regular.ttf) format('trueType');
+}
+
 body {
     background-color: hsl(30, 54%, 90%);
+    line-height: 1.3;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     margin: 0;
     padding: 90px 0;
     display: flex;
@@ -17,8 +28,200 @@ body {
 
 #wrapper {
     background-color: white;
-    width: 800px;
-    min-height: 200vh;
-    height: 250vh;
+    width: 750px;
+    min-height: 70vh;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 20px 20px 0 20px;
+    margin: 0 20px;
+}
+
+.image-recipe {
+    width: 700px;
+    height: 300px;
+}
+
+.image-recipe img {
+    width: 670px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+.title h1 {
+    font-family: 'Myfont2';
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-family: 'Myfont';
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+}
+
+.preparation {
+    border: none;
+    margin: 30px 0 10px 0;
+    padding: 15px;
+    height: 200px;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    font-family: 'Myfont';
+    box-shadow: 2px 2px 2px 2px hsl(330, 100%, 98%);
+}
+
+.preparation h2 {
+    font-size: 20px;
+    color: hsl(332, 51%, 32%);
+}
+
+.preparation ul {
+    padding-left: 20px;
+}
+
+.preparation ul li::marker {
+    color: hsl(332, 51%, 32%);
+
+}
+
+.preparation ul li {
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.preparation ul li strong {
+    margin-right: 1px;
+    font-weight: 700;
+    color: hsl(30, 10%, 34%);
+}
+
+.content {
+    padding: 10px 20px 20px 20px;
+}
+
+.ingredient h3 {
+    font-size: 30px;
+    font-family: 'Myfont2';
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    margin: 10px 0px 10px 20px;
+}
+
+.ingredient {
+    margin-bottom: 20px;
+}
+
+.ingredient ul {
+    font-family: 'Myfont';
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+}
+
+
+.ingredient ul li {
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.ingredient ul li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+hr {
+    border: 0.5px solid hsl(30, 18%, 87%);
+    margin: 0px 20px 15px 20px;
+}
+
+.intruction {
+    padding: 10px 0;
+}
+
+.intruction h3 {
+    font-size: 30px;
+    font-family: 'Myfont2';
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    margin: 0px 0px 10px 20px
+}
+
+.intruction ol {
+    margin: 20px 0;
+    font-family: 'Myfont';
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+}
+
+.intruction ol li {
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    width: fit-content;
+}
+
+.intruction ol li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+}
+
+.nutrition {
+    padding: 10px 0;
+}
+
+.nutrition h3 {
+    font-size: 30px;
+    font-family: 'Myfont2';
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    margin: 0px 0px 10px 20px
+}
+
+.table-title {
+    padding: 20px;
+    margin-top: 10px;
+    font-family: 'Myfont';
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+}
+
+.nutrition-grid {
+    display: grid;
+    padding-left: 40px;
+    grid-template-columns: 0.5fr auto;
+    text-align: left;
+    font-family: 'Myfont';
+    color: hsl(30, 10%, 34%);
+}
+
+.nutrition-grid p {
+    border-bottom: 0.5px solid hsl(30, 18%, 87%);
+    text-indent: 20px;
+    padding: 10px;
+}
+
+.nutrition-grid p {
+    color: hsl(14, 45%, 36%);
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        width: 90%;
+    }
+
+    .image-recipe {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-recipe img {
+        width: 100%;
+        height: auto;
+    }
 }
